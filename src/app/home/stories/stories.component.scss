@@ -1,0 +1,112 @@
+.section-stories {
+    margin-top: 0;
+    height:auto;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: 'Cookie', cursive;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(#f6dfdf, 0.8),
+        rgba(rgba(173, 230, 200, 0), 0.8)),
+    url(../../../assets/imgages/photo-wedding/088A8355.jpg);
+    background-size: cover;
+
+    .heading-secondary {
+        font-size: 7rem;
+        font-weight: 700;
+        display: inline-block;
+        // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        // -webkit-background-clip: text;
+        // color: transparent;
+        // font-family: cursive;
+        font-family: 'Cookie', cursive;
+        letter-spacing: .5rem;
+        transition: all .2s;
+
+        &:hover {
+            transform: skewY(2deg) skewX(15deg) scale(1.1);
+            text-shadow: .5rem 1rem 2rem rgba(#000, .2);
+        }
+    }
+
+    .stories {
+        position: relative;
+        padding: 15rem 0;
+        
+        .story {
+            width: 70%;
+            margin: 0 auto;
+            box-shadow: 0 3rem 3rem rgba(#000, .1);
+            background-color: rgba(#fff, .2);
+            border-radius: 3px;
+            padding: 3rem;
+            text-align: center;
+            font-size: 1.6rem;
+            transform: skewX(-7deg);
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__shape {
+                width: 20rem;
+                height: 20rem;
+                float: left;
+                transform: translateY(-10rem) skewX(7deg);
+                overflow: hidden;
+                border-radius: 50%;
+            }
+        
+            &__img {
+                height:100%;
+                width: 100%;
+                object-fit: cover;
+                backface-visibility: hidden;
+                transition: all .5s;
+                cursor: pointer;
+            }
+        
+            &__text {
+                position: relative;
+                margin-top: -8rem;
+                transform: skewX(7deg);
+                h3 {
+                    font-size: 5rem;
+                }
+                p  {
+                    font-size: 2rem;
+                    font-family: normal;
+                }
+            }
+        
+            &__caption {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 20%);
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 3rem;
+                text-align: center;
+                opacity: 0;
+                transition: all .5s;
+                backface-visibility: hidden;
+                line-height: 4rem;
+            }
+        
+            &:hover .story__img {
+                transform: scale(1.5);
+                filter: blur(3px) brightness(80%);
+            }
+
+            &:hover .story__caption {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        
+        }
+    }
+}
+
