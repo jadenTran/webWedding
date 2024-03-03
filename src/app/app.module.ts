@@ -11,6 +11,9 @@ import { ContentComponent } from './home/content/content.component';
 import { StoriesComponent } from './home/stories/stories.component';
 import { TimelineComponent } from './home/timeline/timeline.component';
 import { PhotoInHomeComponent } from './home/photo-in-home/photo-in-home.component';
+import { PreweddingComponent } from './home/prewedding/prewedding.component';
+import { OurmemoryComponent } from './home/ourmemory/ourmemory.component';
+import { GallerysChildComponent } from './home/gallerys-child/gallerys-child.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { PhotoInHomeComponent } from './home/photo-in-home/photo-in-home.compone
     StoriesComponent,
     TimelineComponent,
     PhotoInHomeComponent,
+    PreweddingComponent,
+    OurmemoryComponent,
+    GallerysChildComponent,
   ],
   imports: [
     BrowserModule,

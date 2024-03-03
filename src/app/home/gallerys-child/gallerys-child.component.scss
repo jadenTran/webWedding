@@ -1,0 +1,59 @@
+:host {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .gallery__img {
+        width: 100rem;
+        height: 66,7rem;
+        opacity: 0.9;
+    } 
+
+}
+.galley__des {
+    color: red;
+    display: block;
+    font-size: 1.5rem;
+    top: 2rem;
+    position: relative;
+}
+
+.gallery__item-navigate {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    color: whitesmoke;
+};
+
+.gallery__item-navigate-btn--prev {
+    position: absolute;
+    border: none;
+    left: 10%;
+    top: 50%;
+}
+.gallery__item-navigate-btn--next {
+    position: absolute;
+    border: none;
+    right: 10%;
+    top: 50%;
+}
+
+.gallery__item-navigate-btn-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
