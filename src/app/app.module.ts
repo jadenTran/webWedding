@@ -14,6 +14,7 @@ import { PhotoInHomeComponent } from './home/photo-in-home/photo-in-home.compone
 import { PreweddingComponent } from './home/prewedding/prewedding.component';
 import { OurmemoryComponent } from './home/ourmemory/ourmemory.component';
 import { GallerysChildComponent } from './home/gallerys-child/gallerys-child.component';
+import { TheEndComponent } from './home/the-end/the-end.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { GallerysChildComponent } from './home/gallerys-child/gallerys-child.com
     PreweddingComponent,
     OurmemoryComponent,
     GallerysChildComponent,
+    TheEndComponent,
   ],
   imports: [
     BrowserModule,
