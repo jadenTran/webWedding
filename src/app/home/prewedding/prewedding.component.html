@@ -1,1 +1,71 @@
-<p>prewedding works!</p>
+<!-- <app-header></app-header> -->
+<div class="preWedding">
+    <div class="photos_title">
+        Wedding 
+    </div>
+    <div class="photos_address">
+        Cầu Ba Son
+    </div>
+    <div class="gallery_bason">
+        <ng-container *ngFor="let i of gallerys; index as idx" #imageGallery>
+            <ng-container *ngIf="idx < 8">
+                <figure class="gallery_bason__item gallery_bason__item--{{i.id}}">
+                    <img [src]="i.imgUrl" class="gallery_bason__img" alt="'gallery_bason image' + idx" (click)="handleShowImg(i)">
+                </figure>
+            </ng-container>
+        </ng-container>
+    </div>
+    <!-- <div class="photos_address">
+        Chơ Bến Thành
+    </div>
+    <div class="gallery_benthanhmarket">
+        <ng-container *ngFor="let i  of gallerys; index as idx" #imageGallery>
+            <ng-container *ngIf=" 7 < idx  && idx < 15">
+                <figure class="gallery_benthanhmarket__item gallery_benthanhmarket__item--{{i.id}}">
+                    <img [src]="i.imgUrl" class="gallery_benthanhmarket__img" alt="'gallery_benthanhmarket image' + idx" (click)="handleShowImg(i)">
+                </figure>
+            </ng-container>
+        </ng-container>
+    </div>
+    <div class="photos_address">
+        Chợ Bến Thành
+    </div>
+    <div class="gallery__medium">
+        <ng-container *ngFor="let i of gallerys; index as idx" #imageGallery>
+            <ng-container *ngIf="idx < 2">
+                <figure class="gallery__medium__item gallery__medium__item--{{i.id}}">
+                    <img [src]="i.imgUrl" class="gallery__medium__img" alt="'gallery__medium image' + idx" (click)="handleShowImg(i)">
+                </figure>
+            </ng-container>
+        </ng-container>
+    </div> -->
+    <!-- <div class="photos_address">
+        Studio
+    </div>
+    <div class="gallery__studio">
+        <ng-container *ngFor="let i of gallerys; index as idx" #imageGallery>
+            <ng-container *ngIf=" idx >= 40 && idx < 54">
+                <figure class="gallery__studio__item gallery__studio__item--{{i.id}}">
+                    <img [src]="i.imgUrl" class="gallery__studio__img" alt="'gallery__studio image' + idx" (click)="handleShowImg(i)">
+                </figure>
+            </ng-container>
+        </ng-container>
+    </div> -->
+    <!-- <div class="photos_address">
+        Wedding Ceremony
+    </div>
+    <div class="gallery__ceremony">
+        <ng-container *ngFor="let i of gallerys; index as idx" #imageGallery>
+            <ng-container *ngIf="idx >= 11">
+                <figure class="gallery__ceremony__item gallery__ceremony__item--{{i.id}}">
+                    <img [src]="i.imgUrl" class="gallery__ceremony__img" alt="'gallery__ceremony image' + idx" (click)="handleShowImg(i)">
+                </figure>
+            </ng-container>
+        </ng-container>
+    </div> -->
+</div>
+
+
+<app-gallerys-child (closeImgEvent)="imgShow = null" *ngIf="imgShow" [imgInfo]="imgShow" [galleryList]="gallerys"></app-gallerys-child>
+
+

@@ -5,7 +5,7 @@ export class Gallery {
 
     constructor(id: number, name: string, imgUrl: string) {
         this.id =id;
-        this.name = name;;;
+        this.name = name;
         this.imgUrl = imgUrl
     }
 }

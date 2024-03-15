@@ -85,7 +85,7 @@ svg {
       &:after {
         content: "";
         display: block;
-        width: 80%;
+        width: 117%;
         margin: auto;
         height: 1px;
         background: green;
@@ -330,7 +330,7 @@ svg {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .slider-item {
       flex-direction: column;
   }

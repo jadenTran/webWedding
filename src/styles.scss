@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 /* Reset CSS */
+
+body {
+    position: relative;
+    width: 100vw;
+    height:  100vh;
+    overflow: hidden;
+};
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,3 +54,24 @@ q:before, q:after {
     content: '';
     content: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    display:none;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

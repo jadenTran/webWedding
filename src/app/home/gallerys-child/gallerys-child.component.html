@@ -1,21 +1,18 @@
 <ng-container *ngIf="gallery">
     <figure class="gallery__item">
         <div class="gallery__item-img">
-            <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            <span class="gallery__des" style="text-align: center;">Hà Nội</span>
+            <img src="{{gallery.imgUrl}}" class="gallery__img" alt="{{gallery.name}}">
+            <span class="gallery__des" style="text-align: center;">{{gallery.name}}</span>
         </div>
         <div class="gallery__item-navigate">
             <div class="gallery__item-navigate-btn gallery__item-navigate-btn--prev" (click)="prevImg(gallery)">
-                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa fa-chevron-left" style="font-size:4rem" aria-hidden="true"></i>
             </div>
-        </div>
-        <div class="gallery__item-navigate">
             <div class="gallery__item-navigate-btn gallery__item-navigate-btn--next" (click)="nextImg(gallery)">
-                <i class="fa-solid fa-chevron-right"></i>
+                <i class="fa fa-chevron-right" style="font-size:4rem" aria-hidden="true"></i>
             </div>
-        </div> <div class="gallery__item-navigate">
             <div class="gallery__item-navigate-btn gallery__item-navigate-btn--close" (click)="closeImg()">
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa fa-close" style="font-size:4rem"></i>
             </div>
         </div>
     </figure>

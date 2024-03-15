@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <div class="photos">
     <div class="photos_title">
         Our Memories
@@ -7,95 +7,99 @@
         Join us on an enchanting exploration through our carefully curated albums that encapsulate the beauty, culture, and memories of our travels in Vietnam. Our albums are a testament to the love we share and the extraordinary memories we've created along the way.
     </div>
     <div class="photos_img gallery">
-        <div class="col-2">
-            <figure class="gallery__item gallery__item--1">
-                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
-            </figure>
-            <div class="gallery__address">
-                Hà Nội
+        <ng-container  *ngFor="let address of addressList; index as idx">
+            <div class="col-2">
+                <ng-container  *ngFor="let img of gallerys" >
+                   <ng-container  *ngIf=" address === img.name">
+                    <figure class="gallery__item">
+                    <img [src]="img.imgUrl" alt="" class="gallery__img" (click)="handleShowImg(img)">
+                    </figure>
+                   </ng-container>
+                </ng-container>
+                <div class="des_address" style="text-align: center;">{{address}}</div>
             </div>
-        </div>
-        <div class="col-2">
-            <figure class="gallery__item gallery__item--1">
-                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
-            </figure>
-            <div class="gallery__address">
-                Hà Nội
-            </div>
-        </div>
-        <div class="col-2">
-            <figure class="gallery__item gallery__item--1">
-                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
-            </figure>
-            <div class="gallery__address">
-                Hà Nội
-            </div>
-        </div>
-        <div class="col-2">
-            <figure class="gallery__item gallery__item--1">
-                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
-            </figure>
-            <div class="gallery__address">
-                Hà Nội
-            </div>
-        </div>
-        <div class="col-2">
-            <figure class="gallery__item gallery__item--1">
-                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
-            </figure>
-            <div class="gallery__address">
-                Hà Nội
-            </div>
-        </div>
-        <div class="col-2">
-            <figure class="gallery__item gallery__item--1">
-                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
-            </figure>
-            <div class="gallery__address">
-                Hà Nội
-            </div>
-        </div>
-        <div class="col-2">
-            <figure class="gallery__item gallery__item--1">
-                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
-            </figure>
-            <div class="gallery__address">
-                Hà Nội
-            </div>
-        </div>
-        <div class="col-2">
-            <figure class="gallery__item gallery__item--1">
-                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
-            </figure>
-            <div class="gallery__address">
-                Hà Nội
-            </div>
-        </div>
+        </ng-container>
     </div>
 </div>
 
-<app-gallerys-child></app-gallerys-child>
+<app-gallerys-child (closeImgEvent)="imgShow = null" *ngIf="imgShow" [imgInfo]="imgShow" [galleryList]="gallerys" #dialog></app-gallerys-child>
+
+
+
+ <!-- <div class="col-2">
+            <figure class="gallery__item gallery__item">
+                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item">
+                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
+            </figure>
+            <div class="gallery__address">
+                Hà Nội
+            </div>
+        </div>
+        <div class="col-2">
+            <figure class="gallery__item gallery__item--1">
+                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
+            </figure>
+            <div class="gallery__address">
+                Hà Nội
+            </div>
+        </div>
+        <div class="col-2">
+            <figure class="gallery__item gallery__item--1">
+                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
+            </figure>
+            <div class="gallery__address">
+                Hà Nội
+            </div>
+        </div>
+        <div class="col-2">
+            <figure class="gallery__item gallery__item--1">
+                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
+            </figure>
+            <div class="gallery__address">
+                Hà Nội
+            </div>
+        </div>
+        <div class="col-2">
+            <figure class="gallery__item gallery__item--1">
+                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
+            </figure>
+            <div class="gallery__address">
+                Hà Nội
+            </div>
+        </div>
+        <div class="col-2">
+            <figure class="gallery__item gallery__item--1">
+                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
+            </figure>
+            <div class="gallery__address">
+                Hà Nội
+            </div>
+        </div>
+        <div class="col-2">
+            <figure class="gallery__item gallery__item--1">
+                <img src="../../../assets/imgages/photo-wedding/088A8426.jpg" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="../../../assets/imgages/photo-wedding/088A8254.jpg" class="gallery__img" alt="">
+            </figure>
+            <div class="gallery__address">
+                Hà Nội
+            </div>
+        </div> -->

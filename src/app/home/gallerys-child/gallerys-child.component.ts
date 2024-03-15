@@ -1,13 +1,18 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-gallerys-child',
   templateUrl: './gallerys-child.component.html',
   styleUrls: ['./gallerys-child.component.scss']
 })
-export class GallerysChildComponent implements OnInit {
+export class GallerysChildComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private el: ElementRef) { }
+  ngAfterViewInit(): void {
+    document.body.appendChild(this.el.nativeElement);
+  }
+
+ 
   _imgInfo: any;
   @Input() set imgInfo(value: string) {
     this._imgInfo= value;
@@ -17,7 +22,7 @@ export class GallerysChildComponent implements OnInit {
 
   get gallery(): any {
     return this._imgInfo;
-  }
+  };
 
   ngOnInit(): void {
   }
@@ -25,7 +30,7 @@ export class GallerysChildComponent implements OnInit {
   prevImg(img: any) {
     const index = this.galleryList.indexOf(img);
     if(index === 0) {
-      this._imgInfo = this.galleryList[this.galleryList.length -1];
+      this._imgInfo = this.galleryList[this.galleryList.length - 1];
       return;
     }
     this._imgInfo = this.galleryList[index - 1];
@@ -34,6 +39,7 @@ export class GallerysChildComponent implements OnInit {
   nextImg(img: any) {
     const index = this.galleryList.indexOf(img);
     if(index === this.galleryList.length - 1) {
+      console.log("===", this._imgInfo);
       this._imgInfo = this.galleryList[0];
       return;
     }
@@ -41,7 +47,7 @@ export class GallerysChildComponent implements OnInit {
   };
 
   closeImg() {
-    this.closeImgEvent.emit();
+    this.closeImgEvent.emit()
   }
 
 }
