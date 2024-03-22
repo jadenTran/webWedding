@@ -3,24 +3,9 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 5rem
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-size: 2.5rem;
-}
-
-h5 {
-  font-size: 2rem;
-}
 
 p {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 img {
@@ -46,6 +31,7 @@ svg {
   letter-spacing: 0.1rem;
   width: 30rem;
   margin: 1.5rem;
+  font-size: 2rem;
 }
 
 .slider_title {
@@ -143,19 +129,19 @@ svg {
             // font-family:'Times New Roman', Times, serif;
             font-style: normal;
             font-weight: bold;
-            font-size: 1.75rem;
+            font-size: 2rem;
             line-height: .5rem;
             margin-bottom: 1.5rem;
           }
           &_time {
-          font-size: 1.25rem;
+          font-size: 2rem;
             line-height: .5rem;
             margin-bottom: 1.5rem;
             font-weight: bold;
 
           }
           &_address {
-            font-size: 1rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
           }
           &_img {

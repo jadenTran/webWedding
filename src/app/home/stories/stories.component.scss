@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 .section-stories {
     margin-top: 0;
     height:auto;
@@ -13,6 +15,16 @@
         rgba(rgba(173, 230, 200, 0), 0.8)),
     url(../../../assets/imgages/photo-wedding/088A8355.jpg);
     background-size: cover;
+
+    .row{
+        // margin: 0 !important;
+        display: flex;
+
+        @include mobile{
+            flex-direction: column;
+            gap: 8rem;
+        }
+    }
 
     .heading-secondary {
         font-size: 7rem;
