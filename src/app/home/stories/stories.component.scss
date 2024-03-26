@@ -9,12 +9,13 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(#f6dfdf, 0.8),
-        rgba(rgba(173, 230, 200, 0), 0.8)),
-    url(../../../assets/imgages/photo-wedding/088A8355.jpg);
-    background-size: cover;
+    // background-image: linear-gradient(
+    //     to right bottom,
+    //     rgba(#f6dfdf, 0.8),
+    //     rgba(rgba(173, 230, 200, 0), 0.8)),
+    // url(../../../assets/imgages/photo-wedding/088A8355.jpg);
+    // background-size: cover;
+    background-color: rgba(173, 230, 200, 0.6);
 
     .row{
         // margin: 0 !important;
@@ -50,23 +51,27 @@
         
         .story {
             width: 70%;
+            height: 100%;
             margin: 0 auto;
             box-shadow: 0 3rem 3rem rgba(#000, .1);
             background-color: rgba(#fff, .2);
-            border-radius: 3px;
+            border-radius: 1rem;
             padding: 3rem;
             text-align: center;
             font-size: 1.6rem;
-            transform: skewX(-7deg);
             display:flex;
             flex-direction: column;
             align-items: center;
+
+            @include tablet{
+                width: 90%;
+            }
 
             &__shape {
                 width: 20rem;
                 height: 20rem;
                 float: left;
-                transform: translateY(-10rem) skewX(7deg);
+                transform: translateY(-10rem);
                 overflow: hidden;
                 border-radius: 50%;
             }
@@ -83,7 +88,6 @@
             &__text {
                 position: relative;
                 margin-top: -8rem;
-                transform: skewX(7deg);
                 h3 {
                     font-size: 5rem;
                 }

@@ -37,7 +37,7 @@ export class OurmemoryComponent implements OnInit {
     new Gallery(
       1,
       "Hà Giang",
-      "assets/imgages/preWedding/LVH_3693.JPG"
+      "assets/imgages/preWedding/LVH_5151.JPG"
     ),
     new Gallery(
       2,
@@ -47,7 +47,7 @@ export class OurmemoryComponent implements OnInit {
     new Gallery(
       3,
       "Hồ Chí Minh",
-      'assets/imgages/preWedding/LVH_3711.JPG'
+      'assets/imgages/preWedding/LVH_3715.JPG'
     ),new Gallery(
       4,
       "Hồ Chí Minh",
@@ -55,51 +55,51 @@ export class OurmemoryComponent implements OnInit {
     ),new Gallery(
       5,
       "Hà Nội",
-      'assets/imgages/preWedding/LVH_3805.JPG'
+      'assets/imgages/preWedding/LVH_4441.JPG'
     ),new Gallery(
       6,
       "Hà Nội",
-      'assets/imgages/preWedding/LVH_3844.JPG'
+      'assets/imgages/preWedding/LVH_4541.JPG'
     ),new Gallery(
       7,
       "Vũng Tàu",
-      'assets/imgages/preWedding/LVH_3886.JPG'
+      'assets/imgages/preWedding/LVH_4665.JPG'
     ),new Gallery(
       8,
       "Vũng Tàu",
-      'assets/imgages/preWedding/LVH_4460.JPG'
+      'assets/imgages/preWedding/LVH_5450.JPG'
     ),new Gallery(
       9,
       "Quảng Ngãi",
-      'assets/imgages/preWedding/LVH_4541.JPG'
+      'assets/imgages/preWedding/LVH_5535.JPG'
     ),new Gallery(
       10,
       "Quảng Ngãi",
-      'assets/imgages/preWedding/LVH_4648.JPG'
+      'assets/imgages/preWedding/LVH_5606.JPG'
     ),new Gallery(
       11,
       "Phú Yên",
-      'assets/imgages/preWedding/LVH_4665.JPG'
+      'assets/imgages/preWedding/LVH_5623.JPG'
     ),new Gallery(
       12,
       "Phú Yên",
-      'assets/imgages/preWedding/LVH_4763.JPG'
+      'assets/imgages/preWedding/LVH_5864.JPG'
     ),new Gallery(
       13,
       "Bình Thuận",
-      'assets/imgages/preWedding/LVH_4764.JPG'
+      'assets/imgages/preWedding/LVH_6296.JPG'
     ),new Gallery(
       14,
       "Bình Thuận",
-      'assets/imgages/preWedding/LVH_4818.JPG'
+      'assets/imgages/preWedding/LVH_6539.JPG'
     ),new Gallery(
       15,
       "Đà Lạt",
-      'assets/imgages/preWedding/LVH_3886.JPG'
+      'assets/imgages/preWedding/LVH_6382.JPG'
     ),new Gallery(
       16,
       "Đà Lạt",
-      'assets/imgages/preWedding/LVH_4460.JPG'
+      'assets/imgages/preWedding/LVH_5606.JPG'
     ),
   ]
   
