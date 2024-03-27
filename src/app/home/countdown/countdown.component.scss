@@ -2,7 +2,7 @@
 @import '../../../styles.scss';
 .countdown {
     max-width: 100%;
-    padding: 5rem 2rem;
+    padding: 5rem 3rem;
 
     &_container{
         display: flex;
@@ -32,6 +32,9 @@
         width: 100%;
         max-width: 800px;
         gap: 5rem;
+        @include mobile{
+            gap: 2rem;
+        }
         &_item {
             font-family: 'Cookie', cursive;
             text-align: center;

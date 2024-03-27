@@ -15,6 +15,18 @@
             </ng-container>
         </ng-container>
     </div>
+    <div class="photos_address">
+        Chơ Bến Thành
+    </div>
+    <div class="gallery_benthanhmarket">
+        <ng-container *ngFor="let i  of gallerys; index as idx" #imageGallery>
+            <ng-container *ngIf=" 7 < idx  && idx < 13">
+                <figure class="gallery_benthanhmarket__item gallery_benthanhmarket__item--{{i.id}}">
+                    <img [src]="i.imgUrl" class="gallery_benthanhmarket__img" alt="'gallery_benthanhmarket image' + idx" (click)="handleShowImg(i)">
+                </figure>
+            </ng-container>
+        </ng-container>
+    </div>
     <!-- <div class="photos_address">
         Chơ Bến Thành
     </div>

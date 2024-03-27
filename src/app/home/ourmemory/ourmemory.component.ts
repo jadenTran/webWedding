@@ -24,9 +24,9 @@ export class OurmemoryComponent implements OnInit {
 
   handleShowImg(img: any) {
     this.imgShow = img;
-    if(this.dialog) {
-      document.body.appendChild(this.dialog.nativeElement);
-    }
+    // if(this.dialog) {
+    //   document.body.appendChild(this.dialog.nativeElement);
+    // }
 
   };
 

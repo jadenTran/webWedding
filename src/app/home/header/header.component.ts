@@ -14,8 +14,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  closeNavi(){
+  closeNavi() {
     this.isChecked = !this.isChecked;
+    if(!this.isChecked){
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
   }
 
 }
