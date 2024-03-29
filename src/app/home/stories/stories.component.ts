@@ -11,5 +11,8 @@ export class StoriesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  callPhoneNumber(phoneNumber: string) {
+    window.location.href = 'tel:' + phoneNumber;
+  }
 
 }
